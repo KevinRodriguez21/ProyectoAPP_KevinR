@@ -39,4 +39,15 @@ public partial class UserSignUpPage : ContentPage
     {
         await Navigation.PopAsync();
     }
+
+    private void SwshowPassword_Toggled(object sender, ToggledEventArgs e)
+    {
+        TxtPassword.IsPassword = true;
+
+        if (SwshowPassword.IsToggled)
+        {
+            TxtPassword.IsPassword = false;
+        }
+    }
+
 }
